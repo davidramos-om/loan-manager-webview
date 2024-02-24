@@ -48,9 +48,19 @@ export default function App() {
     Alert.alert("Error", _error);
   };
 
+  const handleReload = () => {
+    this.webview.reload();
+    setIsLoading(true);
+  };
+
   return (
     <View style={styles.mainContainer}>
-      <AppToolbar leftButton="Inicio" title="Baby Loan" righButton="Idiomas" />
+      <AppToolbar
+        lbAction={handleGoHome}
+        leftButton="Inicio"
+        title="Baby Loan"
+        righButton="Idiomas"
+      />
       <View style={styles.content}>
         {error ? (
           <AppErrorMessage title="Tenemos un problema" error={error} />
