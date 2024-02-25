@@ -13,14 +13,55 @@
     },
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "development",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "resourceClass": "m-medium"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "autoIncrement": true,
+      "channel": "preview",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "resourceClass": "m-medium"
+      }
     },
-    "production": {}
+    "production": {
+      "channel": "production",
+      "autoIncrement": true,
+      "ios": {
+        "resourceClass": "m-medium"
+      }
+    }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "appleId": "babylon.labs.vision@gmail.com",
+        "ascAppId": "com.babylon-labs.baby-loan",
+        "appleTeamId": "XC8QLYH27F"
+      }
+    },
+    "preview": {
+      "ios": {
+        "appleId": "babylon.labs.vision@gmail.com",
+        "ascAppId": "com.babylon-labs.baby-loan",
+        "appleTeamId": "XC8QLYH27F"
+      }
+    },
+    "development": {
+      "ios": {
+        "appleId": "babylon.labs.vision@gmail.com",
+        "ascAppId": "com.balylon.labs.mortage-manager",
+        "appleTeamId": "XC8QLYH27F"
+      }
+    }
   }
 }
